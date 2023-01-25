@@ -21,3 +21,10 @@ import Foundation
 //} else {
 //    print("==")
 //}
+
+//MARK: 2438
+//let aInt = Int(readLine()!)!
+//let aArr = Array(1...aInt)
+//aArr.forEach {
+//    print(String(repeating: "*", count: $0))
+//}

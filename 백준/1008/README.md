@@ -28,7 +28,11 @@ print(aArr[0]/aArr[1])
     - split(separator: Character) -> [Substring]      
 4. " " Character 값으로 문자열의 정수들을 Substring 배열에 아이템으로 저장.      
 5. map으로 [Substring] -> [Double] 변경      
-6. 나눗셈 출력
+6. 나눗셈 출력     
+
+## 새로 배운 문법
+String.split(separator: Character)
+map{ }
 
 ## 참조
 

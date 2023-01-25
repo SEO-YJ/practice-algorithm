@@ -36,7 +36,10 @@ else if arr[0] == arr[1] {
 2. 강제 언래핑 !                 // String    
 3. components 메서드로 배열 만듬   // [String]     
 4. map으로 Int 배열 만듬          // [Int]
-5. Int 배열로 조건문으로 해결 
+5. Int 배열로 조건문으로 해결      
+
+## 새로 배운 문법
+
 
 ## 참조
 
