@@ -28,3 +28,14 @@ import Foundation
 //aArr.forEach {
 //    print(String(repeating: "*", count: $0))
 //}
+
+//MARK: 2562
+var arr: [Int] = []
+for _ in 1...9 {
+    arr.append(Int(readLine()!)!)
+}
+print(arr.max()!)
+print(arr.firstIndex(of: arr.max()!)! + 1)
+
+
+
