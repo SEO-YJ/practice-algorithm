@@ -40,6 +40,11 @@
 - String.map{ $0 } -> [Character]     
     - 문자열에 타입 캐스팅 없이, map 함수를 사용하면 Character 배열이 된다.     
     
+### 배열 모든 요소 더하기
+- Array.reduce(initialValue){$0 + $1} -> result      
+- Array.reduce(initialValue, +) -> result          
+        - 배열 아이템의 모든 요소를 연산하여 반환     
+    
     
 ## Type
 ### 형변환

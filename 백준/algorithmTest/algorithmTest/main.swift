@@ -49,3 +49,43 @@ import Foundation
 //    print()
 //}
 
+//MARK: 8958
+//let count = Int(readLine()!)!
+//var score = [Int]([0])
+//
+//for _ in 1...count {
+//    let arr = readLine()!.map{ $0 }
+//    for (index, value) in arr.enumerated() {
+//        if value == "O" && score[index] == 0 {
+//            score.append(1)
+//        } else if value == "O" && score[index] != 0 {
+//            score.append(score[index] + 1)
+//        } else {
+//            score.append(0)
+//        }
+//    }
+//    print(score.reduce(0, +))
+//    score.removeAll()
+//    score.append(0)
+//}
+
+//let count = Int(readLine()!)!
+//
+//for _ in 1...count {
+//    var score = [Int]([0])
+//    let input = readLine()!.map{ $0 }
+//
+//    for (index, value) in input.enumerated() {
+//        if value == "O" {
+//            if score[index] > 0 {
+//                score.append(score[index] + 1)
+//            } else {
+//                score.append(1)
+//            }
+//        } else {
+//            score.append(0)
+//        }
+//    }
+//    print(score.reduce(0){$0 + $1})
+//}
+
