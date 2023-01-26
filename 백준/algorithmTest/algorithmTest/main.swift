@@ -30,12 +30,22 @@ import Foundation
 //}
 
 //MARK: 2562
-var arr: [Int] = []
-for _ in 1...9 {
-    arr.append(Int(readLine()!)!)
-}
-print(arr.max()!)
-print(arr.firstIndex(of: arr.max()!)! + 1)
+//var arr: [Int] = []
+//for _ in 1...9 {
+//    arr.append(Int(readLine()!)!)
+//}
+//print(arr.max()!)
+//print(arr.firstIndex(of: arr.max()!)! + 1)
 
-
+//MARK: 2675
+//let count = Int(readLine()!)!
+//
+//for _ in 1...count {
+//    let aArr = readLine()!.components(separatedBy: " ")
+//    let aCha = aArr[1].map{$0}
+//    aCha.forEach{
+//        print(String(repeating: $0, count: Int(aArr[0])!), terminator: "")
+//    }
+//    print()
+//}
 

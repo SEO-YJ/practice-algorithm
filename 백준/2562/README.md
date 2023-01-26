@@ -44,7 +44,7 @@ print(aArr.firstIndex(of: aArr.max()!)! + 1)
 ## 해결방법
 1. append 메서드로 빈 배열에 입력 정수 저장                               // [Int]      
 2. max 메서드로 [Int] 배열 아이템 최댓값 반환                             // -> Element?      
-3. firstIndex(of: Element)로 인자의 값이 아이템에 있는 경우 첫번째 인덱스 반환 // -> Int?     
+3. firstIndex(of: Element) 메서드로 인자의 값이 아이템에 있는 경우 첫번째 인덱스 반환 // -> Int?     
      
 
 ## 새로 배운 문법

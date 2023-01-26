@@ -36,6 +36,10 @@
 - Array.firstIndex(of: Element) -> Int?      
     - 배열 내부에 Element가 존재할 경우, 해당값을 갖는 아이템의 첫번째 인덱스 반환      
     
+### 문자열 -> [Character] 
+- String.map{ $0 } -> [Character]     
+    - 문자열에 타입 캐스팅 없이, map 함수를 사용하면 Character 배열이 된다.     
+    
     
 ## Type
 ### 형변환
