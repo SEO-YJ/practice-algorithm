@@ -90,7 +90,11 @@ import Foundation
 //}
 
 //MARK: 10818
-let count = Int(readLine()!)!
-let aArr = readLine()!.components(separatedBy: " ").map { Int($0)! }
-print(aArr.min()!, aArr.max()!)
+//let count = Int(readLine()!)!
+//let aArr = readLine()!.components(separatedBy: " ").map { Int($0)! }
+//print(aArr.min()!, aArr.max()!)
 
+//MARK: 10951
+//while let input = readLine() {
+//    print(input.split(separator: " ").map{ Int($0)! }.reduce(0){ $0 + $1 })
+//}
