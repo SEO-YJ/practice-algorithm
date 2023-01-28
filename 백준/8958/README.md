@@ -83,7 +83,7 @@ for _ in 1...count {
      
 
 ## 새로 배운 문법
-Array.reduce(initialValue){$0 + $1}
+Array.reduce(initialValue){$0 + $1}        
 Array.reduce(initialValue, +)        
       
 

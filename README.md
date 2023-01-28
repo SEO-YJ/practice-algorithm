@@ -27,10 +27,13 @@
     - 배열에 아이템 추가시 사용     
     - 순차적으로 저장     
      
-### 배열 최댓값 반환 
+### 배열 최대, 최소값 반환 
 - Array.max() -> Element?     
     - 배열 아이템의 최댓값 반환     
     - Int, Float, Double 사용 가능해 보임     
+- Array.min() -> Element?     
+    - 배열 아이템의 최솟값 반환    
+    - Int, Float, Double 사용 가능해 보임       
     
 ### 배열 인덱스 반환     
 - Array.firstIndex(of: Element) -> Int?      
@@ -44,6 +47,7 @@
 - Array.reduce(initialValue){$0 + $1} -> result      
 - Array.reduce(initialValue, +) -> result          
         - 배열 아이템의 모든 요소를 연산하여 반환     
+        
     
     
 ## Type

@@ -89,3 +89,8 @@ import Foundation
 //    print(score.reduce(0){$0 + $1})
 //}
 
+//MARK: 10818
+let count = Int(readLine()!)!
+let aArr = readLine()!.components(separatedBy: " ").map { Int($0)! }
+print(aArr.min()!, aArr.max()!)
+
