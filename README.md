@@ -5,6 +5,11 @@
 - readLine() -> String?            
     - 사용자로부터 입력 받을 수 있음    
     - playground에서 사용 불가      
+    
+### Character -> UInt8 (아스키코드 값)      
+- CharacterValue.asciiValue!     
+    - Character 타입 값을 아스키코드 값으로 변환 가능      
+    - .asciiValue는 UInt8? 반환하므로 옵셔널 언래핑 해줘야함.      
       
 
 ## Collection
@@ -42,6 +47,10 @@
 ### 문자열 -> [Character] 
 - String.map{ $0 } -> [Character]     
     - 문자열에 타입 캐스팅 없이, map 함수를 사용하면 Character 배열이 된다.     
+
+### 문자열 -> [Int]      
+- String,map{ Int(String($0))! } -> [Int]       
+    - 문자열을 [Int]로 만들고 싶으면, Character -> String -> Int 순서로 타입 캐스팅해야한다.      
     
 ### 배열 모든 요소 더하기
 - Array.reduce(initialValue){$0 + $1} -> result      
@@ -62,7 +71,7 @@
       
       
 ## Loop
-### 배열 + 조건문    
+### 배열 + 반복문     
 - for value in Array { }     
     - Array의 갯수만큼 반복문 내부의 코드를 반복하여 실행    
     - value에는 배열의 아이템이 하나씩 사용됨     
@@ -74,6 +83,11 @@
 - Array.forEach{ $0 } -> Void      
     - Array의 갯수만큼 클로저 내부의 코드를 반복하여 실행    
     - $0에는 배열의 아이템이 하나씩 사용됨      
+
+### 문자열 + 반복문     
+- for item in StringValue { }      
+    - String의 문자열 갯수만큼 반복문 내부의 코드를 반복하여 실행     
+    - item에는 String의 아이템이 Character 타입 값으로 하나씩 사용됨       
 
 ### while + readLine()      
 - while let name = readLine() { }       

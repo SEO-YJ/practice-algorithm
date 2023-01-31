@@ -6,6 +6,8 @@
 //
 
 import Foundation
+//MARK: solved.ac
+//MARK: Class 1
 
 //MARK: 1008
 //let aArr = readLine()!.split(separator: " ").map{ Double($0)! }
@@ -101,3 +103,19 @@ import Foundation
 
 //MARK: 11654
 //print(Character(readLine()!).asciiValue)
+
+//MARK: 11720
+// 코드 1
+//print(readLine()!.map{ Int(String($0))! }.reduce(0, +))
+
+// 코드2
+//let input = readLine()!
+//var sum = 0
+//
+//for i in input {
+//    sum = sum + Int(String(i))!
+//}
+//
+//print(sum)
+
+
