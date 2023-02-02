@@ -120,7 +120,7 @@ String.uppercased() -> String
 String.lowercased() -> String      
 [String].sort() -> Void         
 [String].sorted(by: <) -> [String]            
-var dictionary = [String: Int]()      
+var dictionary =  &#91;String: Int&#93;()      
 String.forEach{ }       
 Dictionary.forEach{ }      
 Dictionary.values.max() -> Element?             
