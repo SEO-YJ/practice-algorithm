@@ -118,4 +118,77 @@ import Foundation
 //
 //print(sum)
 
+//MARK: 1157
+// 내 해결
+//var inputArr = readLine()!.uppercased().map{String($0)}
+//var input = inputArr.sorted(by: <)
+//
+//var score = [Int]()
+//var arr = [String]()
+//var scoreNum = 0
+//
+//score.append(1)
+//arr.append(input[0])
+//
+//if input.count > 1 {
+//for n in 1...input.count-1 {
+//    if arr[n-1] == input[n] {
+//        score[scoreNum] += 1
+//        arr.append(input[n])
+//    } else {
+//        scoreNum += 1
+//        score.append(1)
+//        arr.append(input[n])
+//    }
+//}
+//}
+//
+//var max = 0
+//var equal = 0
+//var answer = ""
+//var count = 0
+//
+//for n in score {
+//    count += n
+//    if max < n {
+//        equal = 0
+//        max = n
+//        answer = input[count-1]
+//    } else if max == n {
+//        equal = n
+//        }
+//    }
+//
+//
+//if equal == 0 {
+//    print(answer)
+//} else {
+//    print("?")
+//}
 
+
+// 내 해결 새로운 문법
+//1. uppercased()
+//2. sorted(by: )
+
+// 참조하고 해결한 코드
+//let input = readLine()!.uppercased()
+//var dict = [String: Int]()
+//
+//input.forEach {
+//    if dict[String($0)] == nil {
+//        dict[String($0)] = 1
+//    } else {
+//        dict[String($0)] = dict[String($0)]! + 1
+//    }
+//}
+//
+//var output = ""
+//
+//dict.forEach {
+//    if $1 == dict.values.max() {
+//        output += $0
+//    }
+//}
+//
+//print(output.count > 1 ? "?" : output)

@@ -1,18 +1,19 @@
 # Swift 알고리즘 문법
 
-## Tip
+# Tip
 ### 입력
 - readLine() -> String?            
     - 사용자로부터 입력 받을 수 있음    
     - playground에서 사용 불가      
     
 ### Character -> UInt8 (아스키코드 값)      
-- CharacterValue.asciiValue!     
+- Character.asciiValue!     
     - Character 타입 값을 아스키코드 값으로 변환 가능      
     - .asciiValue는 UInt8? 반환하므로 옵셔널 언래핑 해줘야함.      
       
 
-## Collection
+# Collection
+## Array
 ### 문자열 -> 배열
 - String.split(separator: Character) -> [SubString]      
 
@@ -55,22 +56,72 @@
 ### 배열 모든 요소 더하기
 - Array.reduce(initialValue){$0 + $1} -> result      
 - Array.reduce(initialValue, +) -> result          
-        - 배열 아이템의 모든 요소를 연산하여 반환     
+    - 배열 아이템의 모든 요소를 연산하여 반환     
         
+### 문자열 배열 오름차순, 내림차순 정렬    
+- [String].sort() -> Void       
+    - 문자열 배열을 오름차순 정렬      
+- [String].sort(by: >) -> Void     
+    - 문자열 배열을 내림차순 정렬      
+    - 원본 배열 자체를 정렬하여 반환값이 없음 (sorted()와의 차이)             
+    - 시간복잡도: O(nlogn)     
+    - 새로운 배열을 생성하여 메모리 낭비할 필요 없을 경우에 사용 (성능)           
+- [String].sorted() -> [String]     
+    - 문자열 배열을 오름차순 정렬    
+    - 원본은 그대로 있고, 추가로 정렬된 배열을 반환 (sort()와의 차이)     
+    - 새로운 변수에 정렬된 배열을 저장해서 사용.     
+- [String].sorted(by: >) -> [String]      
+    - 문자열 배열을 내림차순 정렬      
+    - 원본은 그대로 있고, 추가로 정렬된 배열을 반환 (sort()와의 차이)     
+    - 새로운 변수에 정렬된 배열을 저장해서 사용.     
+    - 시간복잡도: O(nlogn)      
+    - 원본 배열을 유지해야 할 경우에 사용 (성능)       
+      
+      
+## Dictionary
+### 딕셔너리 생성
+- var dictionary = [String: Int]()        
+    - 딕셔너리를 생성      
+    
+### 딕셔너리 값의 최대, 최소값 반환 
+- Dictionary.values.max() -> Element?     
+    - 딕셔너리 값의 최댓값 반환     
+    - Int, Float, Double 사용 가능해 보임     
+- Dictionary.values.min() -> Element?     
+    - 딕셔너리 값의 최솟값 반환    
+    - Int, Float, Double 사용 가능해 보임 
+
+
     
     
-## Type
+# Type
 ### 형변환
 - Int(value) -> Int?     
     - 값이 형변환이 안 되는 경우 nil 반환     
     - 형변환을 확신하는 경우에는 강제 언래핑 !      
-    
+## String 
 ### 문자열 생성     
 - String(repeating: Character, count: Int) -> String?      
     - count 값만큼 Character를 반복하여 String 생성     
+### 문자열 대문자, 소문자 변환      
+- String.uppercased() -> String      
+    - 문자열을 대문자로 변환      
+- String.lowercased() -> String      
+    - 문자열을 소문자로 변환     
+    - 시간복잡도: O(n)    
+    
       
-      
+# Control Flow 
 ## Loop
+### 문자열 + 반복문     
+- for item in String { }      
+    - String의 문자열 갯수만큼 반복문 내부의 코드를 반복하여 실행     
+    - item에는 String의 아이템이 Character 타입 값으로 하나씩 사용됨       
+     
+- String.forEach{ $0 }      
+    - String의 문자열 갯수만큼 클로저 내부의 코드를 반복하여 실행      
+    - $0에는 문자열의 문자가 하나씩 사용됨      
+    
 ### 배열 + 반복문     
 - for value in Array { }     
     - Array의 갯수만큼 반복문 내부의 코드를 반복하여 실행    
@@ -83,14 +134,22 @@
 - Array.forEach{ $0 } -> Void      
     - Array의 갯수만큼 클로저 내부의 코드를 반복하여 실행    
     - $0에는 배열의 아이템이 하나씩 사용됨      
-
-### 문자열 + 반복문     
-- for item in StringValue { }      
-    - String의 문자열 갯수만큼 반복문 내부의 코드를 반복하여 실행     
-    - item에는 String의 아이템이 Character 타입 값으로 하나씩 사용됨       
-
+    
+### 딕셔너리 + 반복문      
+Dictionary.forEach{ $0, $1 } -> Void      
+    - Dictionary의 갯수만큼 클로저 내부의 코드를 반복하여 실행    
+    - $0에는 해당 딕셔너리 아이템의 key, $1에는 해당 딕셔너리 아이템의 value가 하나씩 사용됨            
+    - 원래 딕셔너리의 값은 옵셔널 타입인데, 클로저 내부의 $1은 옵셔널이 해제된 값임     
+      
 ### while + readLine()      
 - while let name = readLine() { }       
     - 입력값이 있을 경우, 반복문 실행      
     - 입력값이 있으면, String 타입으로 name을 반복문 내부에서 사용 가능 -> 옵셔널 언래핑      
+
+
+## Condition 
+### 삼항연산자 
+- Condition ? True Output : False Output            
+    - 조건 ? 참일 경우 값 : 틀릴 경우 값       
+    - print(Condition ? True Output : False Output)으로 많이 사용      
 

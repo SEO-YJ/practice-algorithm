@@ -43,7 +43,7 @@ print(sum)
 3. reduce로 [Int] 값 모두 더하여 반환             
         
 ## 새로 배운 문법
-String.map{ Int(String($0))! }
+String.map{ Int(String($0))! }          
 for item in StringValue {
     
 }
