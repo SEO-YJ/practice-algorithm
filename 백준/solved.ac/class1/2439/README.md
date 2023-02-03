@@ -57,8 +57,10 @@ for n in 1...input {
 2. stride 범위제어 함수를 이용하여 조건 설정      
         
 ## 새로 배운 문법
-for _ in stride(from: 부터, to: 까지, by: 연산) { }          
+for _ in stride(from: 부터, to: 까지(end 포함 x), by: 연산) { }          
+for _ in stride(from: 부터, through: 까지(end 포함 o), by: 연산) { }
 
 ## 참조      
 [백준 2439번 참조](https://velog.io/@leeyoungwoozz/Swift-%EB%B0%B1%EC%A4%80-2439)      
+[stride 함수](https://jud00.tistory.com/entry/%EC%98%A4%EB%8A%98%EC%9D%98-Swift-%EC%A7%80%EC%8B%9D-stride-%ED%95%A8%EC%88%98-%EB%B0%B1%EC%A4%80-2742%EB%B2%88-%EA%B8%B0%EC%B0%8D-N-%EC%97%AD%EC%88%98-%EA%B5%AC%ED%95%98%EA%B8%B0)    
 

@@ -149,10 +149,15 @@ Dictionary.forEach{ $0, $1 } -> Void
     - 입력값이 있으면, String 타입으로 name을 반복문 내부에서 사용 가능 -> 옵셔널 언래핑      
 
 ### 범위 제어 함수 
-- for _ in stride(from: 부터, to: 까지, by: 연산) { }       
+- for _ in stride(from: 부터, to: 까지(end 포함 x), by: 연산) { }       
     - from 부터, to 까지 by 연산으로 범위를 제어한다.      
         - from < to 일 경우: from부터 to미만까지 by 연산       
         - from > to 일 경우: from부터 to초과까지 by 연산        
+
+- for _ in stride(from: 부터, through: 까지(end 포함 o), by: 연산) { }       
+    - from 부터, through 까지 by 연산으로 범위를 제어한다.      
+        - from < through 일 경우: from부터 through까지 by 연산       
+        - from > to 일 경우: from부터 through까지 by 연산   
         
        
       
