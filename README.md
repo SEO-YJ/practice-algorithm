@@ -12,6 +12,7 @@
     - .asciiValue는 UInt8? 반환하므로 옵셔널 언래핑 해줘야함.      
       
 
+
 # Collection
 ## Array
 ### 문자열 -> 배열
@@ -78,9 +79,10 @@
     - 원본 배열을 유지해야 할 경우에 사용 (성능)       
       
       
+      
 ## Dictionary
 ### 딕셔너리 생성
-- var dictionary = [String: Int]()        
+- var dictionary =  &#91;String: Int&#93;()        
     - 딕셔너리를 생성      
     
 ### 딕셔너리 값의 최대, 최소값 반환 
@@ -92,7 +94,6 @@
     - Int, Float, Double 사용 가능해 보임 
 
 
-    
     
 # Type
 ### 형변환
@@ -109,6 +110,7 @@
 - String.lowercased() -> String      
     - 문자열을 소문자로 변환     
     - 시간복잡도: O(n)    
+    
     
       
 # Control Flow 
@@ -146,7 +148,14 @@ Dictionary.forEach{ $0, $1 } -> Void
     - 입력값이 있을 경우, 반복문 실행      
     - 입력값이 있으면, String 타입으로 name을 반복문 내부에서 사용 가능 -> 옵셔널 언래핑      
 
-
+### 범위 제어 함수 
+- for _ in stride(from: 부터, to: 까지, by: 연산) { }       
+    - from 부터, to 까지 by 연산으로 범위를 제어한다.      
+        - from < to 일 경우: from부터 to미만까지 by 연산       
+        - from > to 일 경우: from부터 to초과까지 by 연산        
+        
+       
+      
 ## Condition 
 ### 삼항연산자 
 - Condition ? True Output : False Output            

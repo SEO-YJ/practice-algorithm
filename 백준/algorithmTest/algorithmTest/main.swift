@@ -192,3 +192,25 @@ import Foundation
 //}
 //
 //print(output.count > 1 ? "?" : output)
+
+//MARK: 2439
+// 내 풀이
+//let input = Int(readLine()!)!
+//for n in 1...input {
+//for i in 1...input {
+//    print(input > i+n-1 ? " " : "*", terminator: "")
+//}
+//    print()
+//}
+//
+// stride 사용하여 풀기
+//for n in 1...input {
+//    for _ in stride(from: input, to: n, by: -1) {
+//        print(" ", terminator: "")
+//    }
+//    for _ in stride(from: 0, to: n, by: +1) {
+//        print("*", terminator: "")
+//    }
+//    print()
+//}
+
