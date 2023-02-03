@@ -214,3 +214,29 @@ import Foundation
 //    print()
 //}
 
+
+//MARK: 2577
+//var sum = 1
+//var count = 0
+//
+//while let input = readLine() {
+//    sum *= Int(input)!
+//    count += 1
+//    if count == 3 {
+//        break
+//    }
+//}
+//
+//let arr = String(sum).map{ Int(String($0))! }
+//
+//var dict = [Int: Int]()
+//arr.forEach {
+//    dict[$0] = dict[$0] == nil ? 1 : dict[$0]! + 1
+//}
+//
+//
+//for i in stride(from: 0, to: 10, by: +1) {
+//    print(dict[i] == nil ? "0" : dict[i]!)
+//}
+
+
