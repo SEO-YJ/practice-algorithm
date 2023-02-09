@@ -268,4 +268,21 @@ import Foundation
 // 참조하고 해결한 코드
 //print(readLine()!.split(separator: " ").map{ Int(String($0.reversed()))! }.max()!)
 
+//MARK: 10809
+//let input = readLine()!.map{Int(String($0.asciiValue!))!}
+//
+//var answer = [Int](repeating: -1, count: 26)
+//
+//for (index, value) in input.enumerated() {
+//    for n in 97...122 {
+//        if value == n && answer[n-97] == -1 {
+//            answer[n-97] = index
+//            break
+//            }
+//        }
+//    }
+//
+//
+//print(answer.map { "\($0)" }.joined(separator: " "))
+
 

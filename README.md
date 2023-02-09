@@ -10,6 +10,8 @@
 - Character.asciiValue!     
     - Character 타입 값을 아스키코드 값으로 변환 가능      
     - .asciiValue는 UInt8? 반환하므로 옵셔널 언래핑 해줘야함.      
+    - UInt8? -> Int 로 타입캐스팅하려면 exactly: 가 필요      
+    - UInt8? -> String -> Int는 exactly: 필요 x      
       
 
 
@@ -28,6 +30,8 @@
 ### 배열 생성     
 - Array(1...10) -> [Int]      
     - 1에서 10까지 오름차순으로 아이템이 저장된 [Int] 생성     
+- [Int](repeating: 1, count: 10) -> [Int]      
+    - 아이템의 값을 1로 10개의 아이템을 가진 [Int] 생성    
     
 ### 배열 아이템 추가    
 - Array.append() -> Void       
@@ -52,7 +56,7 @@
 
 ### 문자열 -> [Int]      
 - String,map{ Int(String($0))! } -> [Int]       
-    - 문자열을 [Int]로 만들고 싶으면, Character -> String -> Int 순서로 타입 캐스팅해야한다.      
+    - 문자열을 [Int]로 만들고 싶으면, Character -> String -> Int 순서로 타입 캐스팅해야한다.     
     
 ### 배열 모든 요소 더하기
 - Array.reduce(initialValue){$0 + $1} -> result      
@@ -78,7 +82,10 @@
     - 시간복잡도: O(nlogn)      
     - 원본 배열을 유지해야 할 경우에 사용 (성능)       
       
-      
+### 문자열 배열 -> 문자열      
+- [String].joined(separator: " ")      
+    - 문자열 배열의 아이템들을 separator의 값으로 연결하여 문자열로 반환한다.       
+    
       
 ## Dictionary
 ### 딕셔너리 생성
@@ -170,6 +177,9 @@ Dictionary.forEach{ $0, $1 } -> Void
         - from < through 일 경우: from부터 through까지 by 연산       
         - from > to 일 경우: from부터 through까지 by 연산   
         
+### 반복문 종료       
+- break      
+    - 반복문 내부에서 break 코드를 반복문을 탈출한다.      
        
       
 ## Condition 
