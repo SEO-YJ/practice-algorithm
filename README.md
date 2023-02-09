@@ -108,8 +108,8 @@
     - 값이 형변환이 안 되는 경우 nil 반환     
     - 형변환을 확신하는 경우에는 강제 언래핑 !      
 - String(IntValue) -> String     
-- String(ReversedCollection<Substring>) -> String    
-- String(ReversedCollection<String>) -> String     
+- String(ReversedCollection&lt;Substring&gt;) -> String    
+- String(ReversedCollection&lt;String&gt;) -> String     
     
 ## String 
 ### 문자열 생성     
@@ -125,9 +125,9 @@
     - 시간복잡도: O(n)     
     
 ### 문자열 역순으로 만들기     
-- String.reversed() -> ReversedCollection<String>       
+- String.reversed() -> ReversedCollection&lt;String&gt;      
     - 문자열을 역순으로 변환     
-    - 반환 타입이 ReversedCollection<String> 이므로 String으로 타입 캐스팅하여 사용    
+    - 반환 타입이 ReversedCollection&lt;String&gt; 이므로 String으로 타입 캐스팅하여 사용    
     
     
       
