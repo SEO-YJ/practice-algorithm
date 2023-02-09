@@ -96,20 +96,31 @@
 
     
 # Type
-### 형변환
+## 형변환
 - Int(value) -> Int?     
     - 값이 형변환이 안 되는 경우 nil 반환     
     - 형변환을 확신하는 경우에는 강제 언래핑 !      
+- String(IntValue) -> String     
+- String(ReversedCollection<Substring>) -> String    
+- String(ReversedCollection<String>) -> String     
+    
 ## String 
 ### 문자열 생성     
 - String(repeating: Character, count: Int) -> String?      
     - count 값만큼 Character를 반복하여 String 생성     
+        
 ### 문자열 대문자, 소문자 변환      
 - String.uppercased() -> String      
     - 문자열을 대문자로 변환      
+     
 - String.lowercased() -> String      
     - 문자열을 소문자로 변환     
-    - 시간복잡도: O(n)    
+    - 시간복잡도: O(n)     
+    
+### 문자열 역순으로 만들기     
+- String.reversed() -> ReversedCollection<String>       
+    - 문자열을 역순으로 변환     
+    - 반환 타입이 ReversedCollection<String> 이므로 String으로 타입 캐스팅하여 사용    
     
     
       
@@ -166,4 +177,11 @@ Dictionary.forEach{ $0, $1 } -> Void
 - Condition ? True Output : False Output            
     - 조건 ? 참일 경우 값 : 틀릴 경우 값       
     - print(Condition ? True Output : False Output)으로 많이 사용      
+
+
+# Function
+### 함수의 인자로 온 전역변수의 값 변경      
+- func functionName(a: inout Type) { } , functionName(a: &argument)      
+    - parameter에 inout 키워드를 사용하여 전역변수의 값 참조     
+    - 함수 호출시 인자 옆에 & 키워드 사용       
 

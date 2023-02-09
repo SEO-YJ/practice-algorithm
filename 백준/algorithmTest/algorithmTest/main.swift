@@ -194,7 +194,7 @@ import Foundation
 //print(output.count > 1 ? "?" : output)
 
 //MARK: 2439
-// 내 풀이
+// 내 해결
 //let input = Int(readLine()!)!
 //for n in 1...input {
 //for i in 1...input {
@@ -238,5 +238,34 @@ import Foundation
 //for i in stride(from: 0, to: 10, by: +1) {
 //    print(dict[i] == nil ? "0" : dict[i]!)
 //}
+
+//MARK: 2908
+// 내 해결
+//let input = readLine()!.components(separatedBy: " ").map{ Int($0)! }
+//
+//var aArr = String(input[0]).map{ Int(String($0))! }
+//var bArr = String(input[1]).map{ Int(String($0))! }
+//
+//func swap(arr: inout [Int]) {
+//    var num = 0
+//
+//    num = arr[0]
+//    arr[0] = arr[2]
+//    arr[2] = num
+//}
+//swap(arr: &aArr)
+//swap(arr: &bArr)
+//
+//func compareArray(arr1: [Int], arr2: [Int]) {
+//    let num1 = arr1[0]*100 + arr1[1]*10 + arr1[2]
+//    let num2 = arr2[0]*100 + arr2[1]*10 + arr2[2]
+//
+//    print(num1 > num2 ? num1 : num2)
+//}
+//
+//compareArray(arr1: aArr, arr2: bArr)
+
+// 참조하고 해결한 코드
+//print(readLine()!.split(separator: " ").map{ Int(String($0.reversed()))! }.max()!)
 
 
