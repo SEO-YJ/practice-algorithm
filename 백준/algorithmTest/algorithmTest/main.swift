@@ -285,4 +285,65 @@ import Foundation
 //
 //print(answer.map { "\($0)" }.joined(separator: " "))
 
+//MARK: 1018
+//let inputNum = readLine()!.split(separator: " ").map{ Int(String($0))! }
+//// y개수, x개수 입력 받음
+//
+//var inputBoard = [[String]]()
+//inputBoard.append(Array(repeating: ".", count: inputNum[1] + 1))
+//// [., ., ., ., ., ...] 삽입
+//
+//for _ in 1...inputNum[0] {
+//    inputBoard.append(["."] + readLine()!.map{String($0)})
+//    }
+//
+//// [1, 1] 부터 시작
+//
+//var resultInt: [Int] = [Int]()
+//
+//
+//func chessBoardChangeCount(startX: Int, startY: Int, board: [[String]]) -> Int {
+//var countResultWB = 0
+//var countResultBW = 0
+//
+//for countY in 0...7 {
+//    for countX in 0...7 {
+//        if (countY + countX).isMultiple(of: 2) {
+//            if board[countY + startY][countX + startX] == "B" {
+//                countResultWB += 1
+//            }
+//        } else {
+//            if board[countY + startY][countX + startX] == "W" {
+//                countResultWB += 1
+//            }
+//        }
+//    }
+//}
+//
+//for countY in 0...7 {
+//    for countX in 0...7 {
+//        if (countY + countX).isMultiple(of: 2) {
+//            if board[countY + startY][countX + startX] == "W" {
+//                countResultBW += 1
+//            }
+//        } else {
+//            if board[countY + startY][countX + startX] == "B" {
+//                countResultBW += 1
+//            }
+//        }
+//    }
+//}
+//
+//    return min(countResultWB, countResultBW)
+//}
+//
+//for y in 1...(inputNum[0] - 8 + 1) {
+//    for x in 1...(inputNum[1] - 8 + 1) {
+//        resultInt.append(chessBoardChangeCount(startX: x, startY: y, board: inputBoard))
+//    }
+//}
+//
+//print(resultInt.min()!)
+//
+
 

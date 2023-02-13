@@ -55,7 +55,7 @@
     - 문자열에 타입 캐스팅 없이, map 함수를 사용하면 Character 배열이 된다.     
 
 ### 문자열 -> [Int]      
-- String,map{ Int(String($0))! } -> [Int]       
+- String.map{ Int(String($0))! } -> [Int]       
     - 문자열을 [Int]로 만들고 싶으면, Character -> String -> Int 순서로 타입 캐스팅해야한다.     
     
 ### 배열 모든 요소 더하기
@@ -85,6 +85,21 @@
 ### 문자열 배열 -> 문자열      
 - [String].joined(separator: " ")      
     - 문자열 배열의 아이템들을 separator의 값으로 연결하여 문자열로 반환한다.       
+    
+### 2차원 배열 선언
+- var array = [[String]]() -> array[y][x]         
+    - 아이템의 타입을 String으로 하는 2차원 배열 생성     
+    - array[y][x]로 아이템 값 참조     
+    - x: 행       
+    - y: 열      
+     
+### 2차원 배열 아이템 추가     
+- [[String]].append([String])     
+    - 2차원 배열의 append는 해당 타입의 배열들을 추가할 수 있다.      
+    - 배열이 아닌 그냥 기본 타입 값은 append드로 추가할 수 없다.     
+- [[String]].append(Array(repeating: StringValue, count: count))     
+    - Array(repeating: , count: )로 배열을 직접 생성하여 인자로 넣어줄 수도 있다.      
+    
     
       
 ## Dictionary
@@ -129,7 +144,16 @@
     - 문자열을 역순으로 변환     
     - 반환 타입이 ReversedCollection&lt;String&gt; 이므로 String으로 타입 캐스팅하여 사용    
     
-    
+## Int     
+### 짝수 판별     
+- Int.isMultiple(of: IntValue) -> Bool      
+    - isMultiple 메서드의 인자 값의 배수인지 판별     
+    - Int 값이 인자의 배수일 경우 True, 아니면 False     
+    - %와의 비교       
+        - 공통점: 둘 다 배수인지 판별할 때 사용가능      
+        - 차이점: value % 0 == 0-> 무조건 True -> 0을 예외처리 해줘야함     
+                0.isMultiple(of: 0) -> True      
+                1.isMultiple(of: 0) -> False       
       
 # Control Flow 
 ## Loop
@@ -195,3 +219,10 @@ Dictionary.forEach{ $0, $1 } -> Void
     - parameter에 inout 키워드를 사용하여 전역변수의 값 참조     
     - 함수 호출시 인자 옆에 & 키워드 사용       
 
+### 작은 값 반환      
+- min(Comparable, Comparable) -> Comparable     
+    - 두 값 중 작은 값을 반환하는 함수     
+    - Protocol 'Comparable' as a type cannot conform to the protocol itself   
+    - Comparable 프로토콜을 준수하는 인자를 사용한다.     
+    - 기본 타입은 Comparable 프로토콜을 준수한다. (Int, Double, String...)      
+    
