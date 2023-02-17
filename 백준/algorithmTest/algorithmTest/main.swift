@@ -346,4 +346,23 @@ import Foundation
 //print(resultInt.min()!)
 //
 
+//MARK: 1181
+
+//let a = Int(readLine()!)!
+//var inputSet = Set<String>()        // 중복된 아이템 제거위해 Set에 저장
+//
+//
+//for _ in 1...a {
+//    inputSet.insert(readLine()!)
+//}
+//
+//var inputArray = inputSet.sorted {
+//    $0.count == $1.count ? $0 < $1 : $0.count < $1.count
+//}
+//
+//inputArray.forEach{
+//    print($0)
+//}
+
+
 
